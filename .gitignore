@@ -1,0 +1,67 @@
+# ─── Node / Next.js ─────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+.npm/
+*.tsbuildinfo
+next-env.d.ts
+
+# ─── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Database ────────────────────────────────────────────────────────────────
+golfiq.db
+*.db-shm
+*.db-wal
+
+# ─── Environment / secrets ───────────────────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# ─── Model artifacts ─────────────────────────────────────────────────────────
+models/artifacts/*.pt
+models/artifacts/*.pkl
+models/artifacts/*.onnx
+models/artifacts/*.joblib
+
+# ─── Raw and processed data (not committed — may be large or licensed) ───────
+data/raw/*.csv
+data/raw/*.parquet
+data/raw/*.json
+data/processed/*
+
+# Keep seed data and placeholder files
+!data/seed/
+!data/seed/**
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/artifacts/.gitkeep
+
+# ─── OS / editor artifacts ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-workspace
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+.docker/

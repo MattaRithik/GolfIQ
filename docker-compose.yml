@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+
+  api:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+    image: golfiq-api:local
+    container_name: golfiq_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apps/api:/app
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - DATABASE_URL=sqlite:////app/data/golfiq.db
+      - CORS_ORIGINS=http://localhost:3000
+    working_dir: /app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    image: golfiq-web:local
+    container_name: golfiq_web
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/web:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NODE_ENV=development
+    working_dir: /app
+    command: npm run dev
+    depends_on:
+      - api
+    restart: unless-stopped

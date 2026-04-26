@@ -1,0 +1,19 @@
+round_index,hole_number,par,yardage,score,fairway_result,green_in_regulation,putts,penalties,sand_shots
+0,1,4,380,5,Miss Right,False,2,0,0
+0,2,3,165,3,N/A,True,2,0,0
+0,3,5,520,6,Hit,False,2,0,1
+0,4,4,395,5,Hit,False,2,0,0
+0,5,4,410,5,Miss Left,False,2,1,0
+0,6,3,195,4,N/A,False,2,0,1
+0,7,5,545,5,Hit,True,2,0,0
+0,8,4,360,4,Hit,True,1,0,0
+0,9,4,420,5,Miss Right,False,2,0,0
+0,10,4,375,5,Miss Left,False,2,0,0
+0,11,3,175,3,N/A,True,2,0,0
+0,12,5,530,6,Miss Left,False,3,0,0
+0,13,4,400,5,Hit,False,2,0,1
+0,14,4,385,5,Miss Right,False,2,1,0
+0,15,3,155,3,N/A,True,1,0,0
+0,16,4,415,5,Hit,False,3,0,0
+0,17,5,555,6,Hit,True,2,0,0
+0,18,4,390,5,Miss Right,False,2,0,0
