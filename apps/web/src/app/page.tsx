@@ -86,17 +86,17 @@ export default function HomePage() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/dashboard"
+              href="/login"
               className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-400 text-white font-semibold rounded-xl transition-all duration-200 shadow-glow hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]"
             >
-              Open Dashboard
+              Get Started
               <ChevronRight size={18} />
             </Link>
             <Link
-              href="/rounds/new"
+              href="/login"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/8 hover:bg-white/12 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200"
             >
-              Add New Round
+              Sign In
               <ChevronRight size={18} />
             </Link>
           </div>
@@ -151,16 +151,16 @@ export default function HomePage() {
         </div>
         <div className="flex gap-3">
           <Link
-            href="/profile"
+            href="/login"
             className="px-5 py-2.5 bg-white/8 hover:bg-white/12 text-white text-sm font-medium rounded-lg border border-white/10 transition-all"
           >
-            Create Profile
+            Sign In
           </Link>
           <Link
-            href="/rounds/new"
+            href="/login"
             className="px-5 py-2.5 bg-green-500 hover:bg-green-400 text-white text-sm font-semibold rounded-lg transition-all shadow-glow"
           >
-            Log Round
+            Get Started
           </Link>
         </div>
       </div>
@@ -168,7 +168,7 @@ export default function HomePage() {
       {/* Trend indicator */}
       <div className="mt-8 flex items-center gap-2 text-slate-600 text-xs">
         <TrendingUp size={14} />
-        <span>All data is stored locally. Your game stats never leave your machine.</span>
+        <span>MVP — local backend + demo mode. Sign in with <span className="text-slate-500 font-mono">demo / demo123</span> to explore.</span>
       </div>
     </div>
   );
